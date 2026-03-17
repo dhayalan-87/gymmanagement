@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Programs | Midtown Fitness Gym</title> 
+  
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #f4f4f4;
+    }
+    .program-section {
+      padding: 80px 10%;
+      text-align: center;
+    }
+    .program-card {
+      background: white;
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      transition: 0.3s;
+    }
+    .program-card:hover {
+      transform: scale(1.05);
+    }
+    .program-card img {
+      border-radius: 10px;
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+    .program-card h3 {
+      font-size: 1.8rem;
+      font-weight: bold;
+      color: #ff5722;
+      margin-top: 15px;
+    }
+    .program-card p {
+      font-size: 1rem;
+      color: #555;
+      line-height: 1.6;
+    }
+  </style>
+</head>
+<body>
+  
+  <!-- Header Placeholder -->
+  {% include "gym/navbar.html" %}
+  
+  <!-- Our Programs Section -->
+  <section class="program-section">
+    <h2 class="mb-4" style="font-size: 2.5rem; font-weight: bold; color: #333;">
+      Our <span style="color: #ff5722;">Programs</span>
+    </h2>
+    <div class="container">
+      <div class="row">
+        
+        <div class="col-md-4 mb-4">
+          <div class="program-card">
+            <img src="{% static 'images/weight training.jpg' %}" alt="Weight Training">
+            <h3>Weight Training</h3>
+            <p>Build muscle strength with our expert trainers and top-quality equipment.</p>
+          </div>
+        </div>
+        
+        <div class="col-md-4 mb-4">
+          <div class="program-card">
+            <img src="{% static 'images/cardio.jpg' %}" alt="Cardio Fitness">
+            <h3>Cardio Fitness</h3>
+            <p>Boost endurance with high-intensity workouts and treadmill sessions.</p>
+          </div>
+        </div>
+        
+        <div class="col-md-4 mb-4">
+          <div class="program-card">
+            <img src="{% static 'images/yoga.jpg' %}" alt="Yoga & Flexibility">
+            <h3>Yoga & Flexibility</h3>
+            <p>Improve flexibility and mental wellness with our yoga sessions.</p>
+          </div>
+        </div>
+        
+        <div class="col-md-4 mb-4">
+          <div class="program-card">
+            <img src="{% static 'images/zumba.jpg' %}" alt="Personal Training">
+            <h3>Zumba</h3>
+            <p>A dance-based fitness class with Latin-inspired music and movements for a fun cardio workout.</p>
+          </div>
+        </div>
+
+        <div class="col-md-4 mb-4">
+          <div class="program-card">
+            <img src="{% static 'images/crossfit.jpg' %}" alt="Personal Training">
+            <h3>CrossFit Training</h3>
+            <p>GA mix of weightlifting, cardio, and functional exercises for overall strength and conditioning.</p>
+          </div>
+        </div>
+
+        <div class="col-md-4 mb-4">
+          <div class="program-card">
+            <img src="{% static 'images/aqua-aerobics.jpg' %}" alt="Personal Training">
+            <h3>Aqua Aerobics</h3>
+            <p>A low-impact water-based workout that improves strength, flexibility, and cardiovascular health.</p>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  </section>
+  
+  <!-- Footer Placeholder -->
+  {% include "gym/footer.html" %}
+  
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  
+</body>
+</html>

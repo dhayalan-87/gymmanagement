@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+  <style type="text/css">
+    .bs-example {
+      margin: 0px;
+    }
+
+    .bg-dark {
+      background-color: #324854 !important;
+    }
+
+    .navbar-brand {
+      font-size: 20px;
+      font-family: sans-serif;
+    }
+
+    /* Dropdown Hover Effect */
+    .nav-item.dropdown:hover .dropdown-menu {
+      display: block;
+      margin-top: 0;
+    }
+
+    /* Adjust dropdown button */
+    .dropdown-menu {
+      min-width: 180px;
+      transition: all 0.3s ease-in-out;
+    }
+
+    .dropdown-item {
+      font-size: 16px;
+      transition: background 0.3s ease;
+    }
+
+    .dropdown-item:hover {
+      background-color: #ff5722;
+      color: white;
+    }
+
+    .navbar-brand {
+      font-size: 24px;
+      font-family: 'Poppins', sans-serif;
+      font-weight: bold;
+      color: #dbdec5 !important;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    }
+    
+    .navbar-nav .nav-link {
+      font-size: 14px;
+      font-weight: 500;
+      font-family: 'Poppins', sans-serif;
+      color: #ffffff !important;
+      margin-right: 15px;
+      padding: 10px 15px;
+      transition: 0.3s ease-in-out;
+    }
+    
+    .navbar-nav .nav-link:hover {
+      color: #ff5722 !important;
+      background-color: rgba(255, 87, 34, 0.2);
+      border-radius: 5px;
+    }
+    
+    .navbar-nav .nav-item.active .nav-link {
+      color: #ff5722 !important;
+      border-bottom: 3px solid #ff5722;
+    }
+    
+    /* Dropdown styling */
+    .dropdown-menu {
+      background-color: #324854;
+      border: none;
+    }
+    
+    .dropdown-item {
+      color: #ffffff !important;
+    }
+    
+    .dropdown-item:hover {
+      background-color: #ff5722 !important;
+      color: white !important;
+      border-radius: 5px;
+    }
+    
+  </style>
+</head>
+
+<body>
+
+  <div class="bs-example">
+    <nav class="navbar navbar-expand-md bg-dark navbar-dark fixed-top">
+      <a href="/" class="navbar-brand" style="color:#dbdec5;">Midtown Fitness</a>
+      <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+        <div class="navbar-nav">
+          <a href="/" class="nav-item nav-link active">Home</a>
+          <a href="/aboutus" class="nav-item nav-link active">About Us</a>
+          <a href="/membership" class="nav-item nav-link active">Membership</a>
+          <a href="/program" class="nav-item nav-link active">Our Program</a>
+          <a href="/contactus" class="nav-item nav-link active">Contact Us</a>
+          
+          <!-- Dropdown for Logins with Hover Effect -->
+          <div class="nav-item dropdown">
+            <a href="#" class="nav-link dropdown-toggle active" id="loginDropdown" role="button">
+              Login
+            </a>
+            <div class="dropdown-menu" aria-labelledby="loginDropdown">
+              <a class="dropdown-item" href="/memberlogin">Member Login</a>
+              <a class="dropdown-item" href="/trainerlogin">Trainer Login</a>
+              <a class="dropdown-item" href="/adminlogin">Admin Login</a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </nav>
+  </div>
+
+</body>
+
+</html>

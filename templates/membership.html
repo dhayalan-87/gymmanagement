@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+    <title>Gym Membership</title>
+    
+    {% include "gym/navbar.html" %}
+
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            text-align: center;
+        }
+
+        /* Membership Section */
+        .membership {
+            padding: 60px 20px;
+            background: #fff;
+        }
+
+        .heading {
+            font-size: 36px;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: #ff5722;
+            margin-bottom: 20px;
+        }
+
+        .heading span {
+            color: #222;
+        }
+
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+        }
+
+        /* Membership Plan Boxes */
+        .box {
+            background: #fff;
+            border-radius: 10px;
+            padding: 30px;
+            width: 300px;
+            text-align: center;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            transition: 0.3s ease-in-out;
+        }
+
+        .box:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .box h3 {
+            font-size: 24px;
+            font-weight: 700;
+            color: #333;
+            margin-bottom: 15px;
+        }
+
+        .box p {
+            font-size: 19px;
+            line-height: 1.5;
+            color: #555;
+        }
+
+        .box span {
+            font-weight: 700;
+            color: #ff5722;
+        }
+
+        /* Pricing */
+        .price {
+            font-size: 22px;
+            font-weight: bold;
+            margin-top: 20px;
+            color: #ff5722;
+        }
+
+        /* Join Us Button */
+        .btn-primary {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 12px 25px;
+            background: #ff5722;
+            color: #fff;
+            font-size: 18px;
+            border-radius: 8px;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        .btn-primary:hover {
+            background: #e64a19;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .row {
+                flex-direction: column;
+                align-items: center;
+            }
+            .box {
+                width: 90%;
+            }
+        }
+    </style>
+</head>
+<body>
+<br>
+    <section class="membership" id="membership">
+        <h3 class="heading">Our <span>Gym</span> Membership</h3>
+        <div class="row">
+
+            <!-- Basic Plan -->
+            <div class="box">
+                <h3>Basic Plan</h3>
+                <p><span>✔</span> Membership Card</p>
+                <p><span>✔</span> Cardio Area</p>
+                <p><span>✔</span> Personal Locker</p>
+                <p><span>✔</span> Duration: 1 Month</p>
+                <p class="price">Price: ₹2000</p>
+                <a href="/membersignup" class="btn-primary">Join Us</a>
+            </div>
+
+            <!-- Standard Plan -->
+            <div class="box">
+                <h3>Standard Plan</h3>
+                <p><span>✔</span> Includes Basic Plan +</p>
+                <p><span>✔</span> Group Fitness Classes</p>
+                <p><span>✔</span> Free Consultation</p>
+                <p><span>✔</span> Duration: 6 Months</p>
+                <p class="price">Price: ₹8000</p>
+                <a href="/membersignup" class="btn-primary">Join Us</a>
+            </div>
+
+            <!-- Premium Plan -->
+            <div class="box">
+                <h3>Premium Plan</h3>
+                <p><span>✔</span> Includes Standard Plan +</p>
+                <p><span>✔</span> Diet Plan Provided</p>
+                <p><span>✔</span> Zumba & Yoga Classes</p>
+                <p><span>✔</span> Duration: 12 Months</p>
+                <p class="price">Price: ₹15000</p>
+                <a href="/membersignup" class="btn-primary">Join Us</a>
+            </div>
+            <div class="box">
+              <h3>Elite Plan</h3>
+              <p><span>✔</span> Includes Premium Plan +</p>
+              <p><span>✔</span> Personal Trainer Avaiable</p>
+              <p><span>✔</span> Spa Access</p>
+              <p><span>✔</span> Duration: 12 Month</p>
+              <p class="price">Price: ₹20000</p>
+              <a href="/membersignup" class="btn-primary">Join Us</a>
+          </div>
+
+        </div>
+    </section>
+      <br>
+    <script src="{% static 'js/main.js' %}"></script>
+    {% include "gym/footer.html" %}
+
+</body>
+</html>
